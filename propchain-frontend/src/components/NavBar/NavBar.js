@@ -1,4 +1,5 @@
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { Link } from 'react-router-dom'; // وارد کردن Link
 import './NavBar.css';
 
 const NavBar = () => {
@@ -16,52 +17,58 @@ const NavBar = () => {
           PropChain
         </Typography>
         <Box sx={{ display: 'flex', gap: '16px' }}>
-          <Button
-            color="inherit"
-            sx={{
-              textTransform: 'none',
-              fontSize: '16px',
-              fontWeight: 500,
-              padding: '8px 16px',
-              '&:hover': {
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <Button
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: '16px',
+                fontWeight: 500,
+                padding: '8px 16px',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: '4px',
+                },
+              }}
+            >
+              Home
+            </Button>
+          </Link>
+          <Link to="/explore" style={{ textDecoration: 'none' }}>
+            <Button
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: '16px',
+                fontWeight: 500,
+                padding: '8px 16px',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: '4px',
+                },
+              }}
+            >
+              Explore
+            </Button>
+          </Link>
+          <Link to="/register" style={{ textDecoration: 'none' }}>
+            <Button
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: '16px',
+                fontWeight: 500,
+                padding: '8px 16px',
+                backgroundColor: 'rgba(255, 255, 255, 0.15)',
                 borderRadius: '4px',
-              },
-            }}
-          >
-            Home
-          </Button>
-          <Button
-            color="inherit"
-            sx={{
-              textTransform: 'none',
-              fontSize: '16px',
-              fontWeight: 500,
-              padding: '8px 16px',
-              '&:hover': {
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                borderRadius: '4px',
-              },
-            }}
-          >
-            Explore
-          </Button>
-          <Button
-            color="inherit"
-            sx={{
-              textTransform: 'none',
-              fontSize: '16px',
-              fontWeight: 500,
-              padding: '8px 16px',
-              backgroundColor: 'rgba(255, 255, 255, 0.15)',
-              borderRadius: '4px',
-              '&:hover': {
-                backgroundColor: 'rgba(255, 255, 255, 0.25)',
-              },
-            }}
-          >
-            Register
-          </Button>
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                },
+              }}
+            >
+              Register
+            </Button>
+          </Link>
         </Box>
       </Toolbar>
     </AppBar>

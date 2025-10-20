@@ -1,26 +1,20 @@
-/* استایل برای صفحه کل */
-body, html {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-/* استایل برای container اصلی */
-.App {
+#root {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* باعث می‌شود که ارتفاع کل صفحه 100% باشد */
 }
 
-/* استایل برای محتوا */
 main {
-  flex-grow: 1; /* این خط باعث می‌شود که محتوا فضای باقی‌مانده را پر کند */
+  flex: 1 0 auto;
 }
 
-/* استایل فوتر */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
+.footer {
+  flex-shrink: 0;
 }
